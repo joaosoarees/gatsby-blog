@@ -11,7 +11,15 @@ import {
   PostItemDate
 } from './styles';
 
-export default function PostItem({ slug, category, date, timeToRead, title, description, background }) {
+export default function PostItem({
+  slug, 
+  category, 
+  date, 
+  timeToRead, 
+  title, 
+  description, 
+  background 
+  }) {
   return (
     <PostItemLink to={slug}>
       <PostItemWrapper>
