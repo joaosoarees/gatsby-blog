@@ -4,7 +4,7 @@ const links = [
     url: 'https://github.com/joaosoarees'
   },
   {
-    label: 'Linkedin',
+    label: 'LinkedinSquare',
     url: 'https://www.linkedin.com/in/jo%C3%A3o-vitor-alves-soares-a20302194/'
   }
 ];
