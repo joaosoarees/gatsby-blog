@@ -14,6 +14,7 @@ export const ProfileLink = styled(Link)`
 
   &:hover {
     color: #1fa1f2;
+    cursor: pointer;
   }
 `;
 
