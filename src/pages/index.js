@@ -8,19 +8,21 @@ import PostItem from "../components/PostItem";
 export default function IndexPage() {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
-      query PostList {
+      query MyQuery {
         allMarkdownRemark {
           edges {
             node {
-              id
               frontmatter {
                 background
                 category
-                date
+                date(locale: "pt-br", formatString: "DD/MMMM")
                 description
                 title
               }
               timeToRead
+              fields {
+                slug
+              }
             }
           }
         }
@@ -36,11 +38,12 @@ export default function IndexPage() {
       {postList.map(({
         node: { 
           frontmatter: { background, category, date, description, title },
-          timeToRead
+          timeToRead,
+          fields: { slug }
         },
       }) => (
         <PostItem
-          slug="/about/"
+          slug={slug}
           background={background}
           category={category}
           date={date}
