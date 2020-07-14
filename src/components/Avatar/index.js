@@ -8,8 +8,8 @@ export default function Avatar() {
       query {
         avatarImage: file(relativePath: { eq: "avatar.jpg" }) {
           childImageSharp {
-            fixed(width: 60, height: 60) {
-              ...GatsbyImageSharpFixed_tracedSVG
+            fluid(maxWidth: 60, maxHeight: 60) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -17,5 +17,10 @@ export default function Avatar() {
     `
   );
 
-  return <Img fixed={avatarImage.childImageSharp.fixed} />
+  return (
+    <Img 
+      fluid={avatarImage.childImageSharp.fluid} 
+      style={{ width: "60px" }}
+    />
+  );
 };
