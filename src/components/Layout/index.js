@@ -5,6 +5,7 @@ import GlobalStyles from '../../styles/GlobalStyles';
 import { LayoutWrapper, LayoutMain } from './styles';
 
 import Sidebar from '../Sidebar';
+import MenuBar from '../MenuBar';
 
 const Layout = ({ children }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Sidebar />
       <LayoutMain>{children}</LayoutMain>
+      <MenuBar />
     </LayoutWrapper>
   );
 };
