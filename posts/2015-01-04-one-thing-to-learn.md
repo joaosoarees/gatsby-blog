@@ -3,7 +3,7 @@ date: 2015-01-04 04:54:23
 title: One thing to learn
 description: And i'm not sure about what.
 category: JS
-background: "#7AAB13"
+background: "#1fa1f2"
 ---
 
 # Lorem ipsum
