@@ -10,6 +10,48 @@ background: "#1fa1f2"
 
 Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [adipiscing](http://google.com) eu pulvinar vel, sodales vitae dui. :thumbsup: :smile: :sparkler:
 
+```jsx
+import React from 'react';
+
+import Icons from './Icons';
+import links from './content';
+
+import { 
+  SocialLinksWrapper,
+  SocialLinksList,
+  SocialLinksLink,
+  SocialLinksItem,
+  IconWrapper 
+} from './styles';
+
+export default function SocialLinks() {
+  return (
+    <SocialLinksWrapper>
+      <SocialLinksList>
+        {links.map((link, index) => {
+          const Icon = Icons[link.label];
+
+          return (
+            <SocialLinksItem key={index}>
+              <SocialLinksLink
+                href={link.url}
+                title={link.label}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconWrapper>
+                  <Icon />
+                </IconWrapper>
+              </SocialLinksLink>
+            </SocialLinksItem>
+          );
+          })}
+      </SocialLinksList>
+    </SocialLinksWrapper>
+  );
+};
+```
+
 ## Fusce a metus eu
 
 Pellentesque `sed` sapien lorem, at lacinia urna. In hac habitasse platea dictumst. Vivamus vel justo in leo laoreet ullamcorper non vitae lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin bibendum ullamcorper rutrum.
