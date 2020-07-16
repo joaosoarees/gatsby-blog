@@ -21,7 +21,7 @@ export default function PostItem({
   background 
   }) {
   return (
-    <PostItemLink to={slug}>
+    <PostItemLink to={slug} key={Math.random(90)}>
       <PostItemWrapper>
         <PostItemTag background={background}>{category}</PostItemTag>
         <PostItemInfo>
@@ -41,7 +41,7 @@ PostItem.propTypes = {
   background: PropTypes.string,
   category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 }
