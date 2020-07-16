@@ -21,7 +21,7 @@ export default function SocialLinks() {
           return (
             <SocialLinksItem key={index}>
               <SocialLinksLink
-                href={link.url}
+                to={link.url}
                 title={link.label}
                 target="_blank"
                 rel="noopener noreferrer"

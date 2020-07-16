@@ -6,7 +6,7 @@ import ReactDisqusComments from 'react-disqus-comments';
 import { CommentsWrapper, CommentsTitle } from './styles';
 
 export default function Comments({ url, title }) {
-  const completeUrl = `https://joaosoares.com${url}`
+  const completeUrl = `http://localhost:8000/${url}`
 
   return (
     <CommentsWrapper>

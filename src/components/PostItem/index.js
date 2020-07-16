@@ -21,7 +21,7 @@ export default function PostItem({
   background 
   }) {
   return (
-    <PostItemLink to={slug} key={Math.random(90)}>
+    <PostItemLink to={slug} >
       <PostItemWrapper>
         <PostItemTag background={background}>{category}</PostItemTag>
         <PostItemInfo>
