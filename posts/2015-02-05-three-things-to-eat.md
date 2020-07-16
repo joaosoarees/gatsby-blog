@@ -1,19 +1,10 @@
 ---
-date: 2015-01-02 05:54:23
-title: Two things area infinite
-description: And i'm not sure about the universe.
-category: Misc
-background: "#7AAB13"
+date: 2015-01-05 04:54:23
+title: Three things to eat
+description: And i'm not sure about what.
+category: CSS
+background: "#a98877"
 ---
-
-# Lorem ipsum
-
-Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus eget adipiscing. Suspendisse in urna ligula, a volutpat mauris. Sed enim mi, [adipiscing](http://google.com) eu pulvinar vel, sodales vitae dui. :thumbsup: :smile: :sparkler:
-
-```javascript
-a=3
-puts a
-```
 
 ## Fusce a metus eu
 

@@ -9,13 +9,13 @@ export default function IndexPage() {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query MyQuery {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
           edges {
             node {
               frontmatter {
                 background
                 category
-                date(locale: "pt-br", formatString: "DD/MMMM")
+                date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
                 description
                 title
               }
