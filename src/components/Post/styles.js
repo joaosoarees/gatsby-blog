@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const PostHeader = styled.header`
   color: #fff;
-  margin: auto;
+  margin: auto auto auto auto;
   max-width: 70rem;
-  padding: 5rem 5rem 0;
+  padding: 2rem 2rem 0;
+  border-bottom: 0.5px solid #38444d;
 `;
 
 export const PostTitle = styled.h1`
@@ -48,7 +49,7 @@ export const MainContent = styled.section`
 
   h1, h2, h3,
   h4, h5 {
-    margin: 2.4rem auto 1rem;
+    margin: 0 auto 1rem 2.4rem;
   }
 
   ul, ol {
