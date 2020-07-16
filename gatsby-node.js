@@ -72,9 +72,9 @@ exports.createPages = ({ graphql, actions }) => {
           slug: node.fields.slug,
           previousPost: next,
           nextPost: previous
-        }
-      })
-    })
+        },
+      });
+    });
 
     const postsPerPage = 4;
     const numPages = Math.ceil(posts.length / postsPerPage);

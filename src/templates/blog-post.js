@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
+import RecommendedPost from '../components/RecommendedPost';
 
 import { 
   PostTitle,
@@ -12,8 +13,10 @@ import {
   MainContent
 } from '../components/Post/styles';
 
-export default function BlogPost({ data }) {
+export default function BlogPost({ data, pageContext }) {
   const post = data.markdownRemark;
+  const next = pageContext.nextPost;
+  const previous = pageContext.previousPost;
 
   return (
     <Layout>
@@ -27,6 +30,8 @@ export default function BlogPost({ data }) {
       <MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </MainContent>
+
+      <RecommendedPost next={next} previous={previous} />
     </Layout>
   );
 };
