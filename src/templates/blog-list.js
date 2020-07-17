@@ -8,8 +8,8 @@ import Pagination from "../components/Pagination";
 
 export default function BlogList(props) {
   const postList = props.data.allMarkdownRemark.edges;
-
   const { currentPage, numPages } = props.pageContext;
+
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`;
@@ -37,14 +37,14 @@ export default function BlogList(props) {
         />
       ))}
 
-      <Pagination 
-        isFirst={isFirst} 
-        isLast={isLast} 
-        currentPage={currentPage} 
-        numPages={numPages} 
-        prevPage={prevPage} 
-        nextPage={nextPage} 
-      />
+        <Pagination 
+          isFirst={isFirst} 
+          isLast={isLast} 
+          currentPage={currentPage} 
+          numPages={numPages} 
+          prevPage={prevPage} 
+          nextPage={nextPage} 
+        />
     </Layout>
   );
 };
@@ -58,6 +58,9 @@ export const query = graphql`
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             background
             category
@@ -66,11 +69,8 @@ export const query = graphql`
             title
           }
           timeToRead
-          fields {
-            slug
-          }
         }
       }
     }
   }
-`;
+`; 
