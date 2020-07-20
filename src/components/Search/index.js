@@ -1,7 +1,9 @@
 import React from 'react';
 
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
+import { InstantSearch, SearchBox, Hits, Stats } from 'react-instantsearch-dom';
+
+import { SearchWrapper } from './styles';
 
 const algolia = {
   appID: process.env.GATSBY_ALGOLIA_APP_ID,
@@ -16,9 +18,14 @@ const searchClient = algoliasearch(
 
 export default function Search() {
   return (
-    <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
-      <SearchBox />
-      <Hits />
-    </InstantSearch>
+    <SearchWrapper>
+      <InstantSearch searchClient={searchClient} indexName={algolia.indexName}>
+        <SearchBox translations={{ placeholder: 'Pesquisar...' }}/>
+        <Stats translations={{ stats(nbHits, timeSpentMs) {
+          return `${nbHits} resultados encontrados em ${timeSpentMs}ms`
+        }}}/>
+        <Hits />
+      </InstantSearch>
+    </SearchWrapper>
   );
 };
