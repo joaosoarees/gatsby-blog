@@ -3,7 +3,7 @@ date: 2015-01-08 05:54:23
 title: Seven things to read before get old
 description: And i'm not sure about what.
 category: Misc
-background: "#1fa1f2"
+background: "var(--highlight)"
 ---
 
 # Lorem ipsum

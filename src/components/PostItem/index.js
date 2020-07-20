@@ -44,4 +44,4 @@ PostItem.propTypes = {
   timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-}
+};
